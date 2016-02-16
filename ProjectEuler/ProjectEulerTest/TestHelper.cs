@@ -5,15 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using ProjectEuler;
 
 namespace ProjectEulerTest
 {
     class TestHelper
     {
-        public static void TimedTest<TInput>(Func<TInput, int> problem, TInput input, int expected) {
+        public static void TimedTest<TInput, TProblem>(TInput input, int expected) where TProblem : IProblem<TInput>, new()
+        {
             Timer watch = new Timer(60000);
+            TProblem problem = new TProblem();
             watch.Elapsed += new ElapsedEventHandler(OnTimeOut);
-            int result = problem(input);
+            int result = problem.Solve(input);
             Assert.AreEqual(expected, result, String.Format("The resulting value is incorrect.\nObtained: {0}\nExpected:{1}", result, expected));
         }
 

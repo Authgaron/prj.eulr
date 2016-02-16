@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    public class Problem2 : IProblem<int>
+    public interface IProblem<TInput>
     {
-        public int Solve(int input)
-        {
-            return 1;
-        }
+        int Solve(TInput input);
     }
 }

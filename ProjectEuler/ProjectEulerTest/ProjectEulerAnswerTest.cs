@@ -10,8 +10,7 @@ namespace ProjectEulerTest
         [TestMethod]
         public void Problem1Test()
         {
-            Problem1 p1 = new Problem1();
-            TestHelper.TimedTest<int>(p1.Solve, 1000, 233168);
+            TestHelper.TimedTest<int, Problem1>(1000, 233168);
         }
     }
 }
