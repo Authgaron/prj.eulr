@@ -16,7 +16,7 @@ namespace ProjectEulerTest
             Timer watch = new Timer(60000);
             TProblem problem = new TProblem();
             watch.Elapsed += new ElapsedEventHandler(OnTimeOut);
-            int result = problem.Solve(input);
+            long result = problem.Solve(input);
             Assert.AreEqual(expected, result, String.Format("The resulting value is incorrect.\nObtained: {0}\nExpected:{1}", result, expected));
         }
 

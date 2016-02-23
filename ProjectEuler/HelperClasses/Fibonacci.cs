@@ -8,9 +8,9 @@ namespace HelperClasses
 {
     public class Fibonacci
     {
-        public static List<int> Below(int input)
+        public static List<long> Below(long input)
         {
-            List<int> result = new List<int>();
+            List<long> result = new List<long>();
             int next = 1;
             int last = 1;
             while (next < input)

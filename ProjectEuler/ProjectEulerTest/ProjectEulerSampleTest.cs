@@ -10,13 +10,25 @@ namespace ProjectEulerTest
         [TestMethod]
         public void Problem1Test()
         {
-            TestHelper.TimedTest<int, Problem1>(10, 23);
+            TestHelper.TimedTest<long, Problem1>(10, 23);
         }
 
         [TestMethod]
         public void Problem2Test()
         {
-            TestHelper.TimedTest<int, Problem2>(100, 44);
+            TestHelper.TimedTest<long, Problem2>(100, 44);
+        }
+
+        [TestMethod]
+        public void Problem3Test()
+        {
+            TestHelper.TimedTest<long, Problem3>(13195, 29);
+        }
+
+        [TestMethod]
+        public void Problem4Test()
+        {
+            TestHelper.TimedTest<long, Problem4>(2, 9009);
         }
     }
 }

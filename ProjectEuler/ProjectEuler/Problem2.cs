@@ -7,14 +7,14 @@ using HelperClasses;
 
 namespace ProjectEuler
 {
-    public class Problem2 : IProblem<int>
+    public class Problem2 : IProblem<long>
     {
-        public int Solve(int input)
+        public long Solve(long input)
         {
-            List<int> fibonacci = Fibonacci.Below(input).FindAll(n => n % 2 == 0);
-            int sum = 0;
+            List<long> fibonacci = Fibonacci.Below(input).FindAll(n => n % 2 == 0);
+            long sum = 0;
 
-            foreach (int x in fibonacci)
+            foreach (long x in fibonacci)
             {
                 sum += x;
             }

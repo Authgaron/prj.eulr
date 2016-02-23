@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    public class Problem1 : IProblem<int>
+    public class Problem1 : IProblem<long>
     {
-        public int Solve(int input)
+        public long Solve(long input)
         {
-            int sum = 0;
-            for (int i = 0; i < input; i++)
+            long sum = 0;
+            for (long i = 0; i < input; i++)
             {
                 sum += (i % 5 == 0 || i % 3 == 0) ? i : 0;
             }

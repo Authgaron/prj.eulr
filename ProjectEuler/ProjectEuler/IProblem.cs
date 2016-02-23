@@ -8,6 +8,6 @@ namespace ProjectEuler
 {
     public interface IProblem<TInput>
     {
-        int Solve(TInput input);
+        long Solve(TInput input);
     }
 }
